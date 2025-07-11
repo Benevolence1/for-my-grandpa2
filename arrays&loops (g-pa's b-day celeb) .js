@@ -1,11 +1,13 @@
 
 
+
+
 var nums = ["Happy", "Birthday", "Grandpa", "The Big", "80"];
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(255);
-  frameRate(15);
+  frameRate(8);
   colorMode(HSB); // Move this here
 }
 
@@ -15,13 +17,17 @@ function draw() {
 }
 
 function appearance() {
-  textSize(random(0, 100)); // Only one textSize call
-  fill(random(5, 310), random(50, 100), random(50, 150));
+  strokeWeight(2.5);
+   stroke('white');
+  textSize(random(90, 100)); // Only one textSize call
+  fill(random(10, 310), random(50, 100), random(50, 150));
+ 
 }
 
 function wordPlacement() {
+  
   for (var i = 0; i < nums.length; i++) {
-    text(nums[i], mouseX, 100 + i * 100); // Removed width/height
+    text(nums[i], 5, 100 + i * 100); // Removed width/height
   }
   for (let i = 0; i < nums.length; i++){
     text(nums[4], random(width), random(height)); // Random placement
@@ -37,6 +43,7 @@ function wordPlacement() {
   }
 
 }
-
-  
+function mousePressed(){
+  background(255)
+}
 
